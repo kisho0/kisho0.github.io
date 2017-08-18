@@ -1,0 +1,10 @@
+#mainHeading {
+  height: 90px;
+  line-height: 50px;
+  text-align: center;
+  background: lightblue;
+  font-family: Impact;
+  border-style: solid;
+  border-width: 5px;
+  border-color: firebrick;   
+}
