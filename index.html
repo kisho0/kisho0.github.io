@@ -4,57 +4,65 @@
         <script type="text/javascript" src="index.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css">
     </head>
-    <body >
+    <body bgcolor=#a8c9ff>
         <div id="mainHeading">
-        <h1> Witch character of Game Of Thrones are you </h1>
+        <h1> Witch character of "Game Of Thrones" are you </h1>
         </div>
+        <br>
+        <br>
+        <br>
         <ol id="questionsList">
-            <li id="question">1st Question</li>
+            <li id="question">How would your friends decribe you with one word?</li>
                 <form action="group1"> <br>
-                <input type="radio" name="question1" value="answer1"checked="checked" >answer1<br>
-                <input type="radio" name="question1" value="answer2">answer2<br>
-                <input type="radio" name="question1" value="answer3">answer3<br>
-                <input type="radio" name="question1" value="answer4">answer4<br>
+                <input type="radio" name="question1" value="answer1"checked="checked" class="option-input radio"><label id="questionLabel">Sarcastic</label><br>
+                <input type="radio" name="question1" value="answer2"class="option-input radio"><label id="questionLabel">Intimidating</label><br>
+                <input type="radio" name="question1" value="answer3"class="option-input radio"><label id="questionLabel">Stubborn</label><br>
+                <input type="radio" name="question1" value="answer4"class="option-input radio"><label id="questionLabel">Brave</label><br>
                 </form> 
-        </ol>
             <br>
             <br>
-         <ol id="questionsList">
-            <li id="question">2nd Question</li>
+            <li id="question">How do you prepare for encountering something new?</li>
                 <form action=""> <br>
-                <input type="radio" name="question2" value="answer1"checked="checked" >answer1<br>
-                <input type="radio" name="question2" value="answer2">answer2<br>
-                <input type="radio" name="question2" value="answer3">answer3<br>
-                <input type="radio" name="question2" value="answer4">answer4<br>
+                <input type="radio" name="question2" value="answer1"checked="checked" class="option-input radio" ><label id="questionLabel">Study or read alot</label><br>
+                <input type="radio" name="question2" value="answer2"class="option-input radio"><label id="questionLabel">Act as soon as possible</label><br>
+                <input type="radio" name="question2" value="answer3"class="option-input radio"><label id="questionLabel">Focus on how to gain benefit from the situation</label><br>
+                <input type="radio" name="question2" value="answer4"class="option-input radio"><label id="questionLabel">Train hard</label><br>
+                <br>
+                <br>
+                </form> 
+            <li id="question">What will be your weapon of choice in a time of need?</li>
+                <form action=""> <br>
+                <input type="radio" name="question3" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">A sword</label><br>
+                <input type="radio" name="question3" value="answer2"class="option-input radio"><label id="questionLabel">A book and a pen</label><br>
+                <input type="radio" name="question3" value="answer3"class="option-input radio"><label id="questionLabel">Money</label><br>
+                <input type="radio" name="question3" value="answer4"class="option-input radio"><label id="questionLabel">I`ll hire someone to protect me</label><br>
+                </form>
+                <br>
+                <br>
+            <li id="question">What is success to you?</li>
+                <form action=""> <br>
+                <input type="radio" name="question4" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">Taking care of the family</label><br>
+                <input type="radio" name="question4" value="answer2"class="option-input radio"><label id="questionLabel">Traveling alot</label><br>
+                <input type="radio" name="question4" value="answer3"class="option-input radio"><label id="questionLabel">Doing well financially</label><br>
+                <input type="radio" name="question4" value="answer4"class="option-input radio"><label id="questionLabel">Working your dream job</label><br>
+                </form>
+                <br>
+                <br>
+            <li id="question">Do you like animals?</li>
+                <form action=""> <br>
+                <input type="radio" name="question5" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">They are my favorite thing in the world</label><br>
+                <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">I hate them</label><br>
+                <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">If I own one I`ll treat it like my child</label><br>
+                <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">They are not so bad</label><br>
                 </form> 
         </ol>
-        <ol id="questionsList">
-            <li id="question">3rd Question</li>
-                <form action=""> <br>
-                <input type="radio" name="question3" value="answer1" checked="checked">answer1<br>
-                <input type="radio" name="question3" value="answer2">answer2<br>
-                <input type="radio" name="question3" value="answer3">answer3<br>
-                <input type="radio" name="question3" value="answer4">answer4<br>
-                </form> 
-        </ol>
-        <ol id="questionsList">
-            <li id="question">4th Question</li>
-                <form action=""> <br>
-                <input type="radio" name="question4" value="answer1" checked="checked">answer1<br>
-                <input type="radio" name="question4" value="answer2">answer2<br>
-                <input type="radio" name="question4" value="answer3">answer3<br>
-                <input type="radio" name="question4" value="answer4">answer4<br>
-                </form> 
-        </ol>
-        <ol id="questionsList">
-            <li id="question">5th Question</li>
-                <form action=""> <br>
-                <input type="radio" name="question5" value="answer1" checked="checked">answer1<br>
-                <input type="radio" name="question5" value="answer2">answer2<br>
-                <input type="radio" name="question5" value="answer3">answer3<br>
-                <input type="radio" name="question5" value="answer4">answer4<br>
-                </form> 
-        </ol>               
-        <button onclick="userResults()">Submit</button>
+        <br>
+        <br>
+        <p id="resultsField"> </p>
+        <br>
+        <br>
+        <button onclick="clearResults()" id="resultsButton1">Do the quiz again</button>
+        <button onclick="userResults()" id="resultsButton" >Submit</button>
+        
       </body>
 </html>
