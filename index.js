@@ -4,166 +4,161 @@
 //       window.location.href = "quizResults.html";
 //     }
 
-var question1;
-var question2;
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+var question1 = "";
+var question2 = "";
 var question3;
 var question4;
 var question5;
 var userScore;
 var userCharacter = "";
+var imageAnswer;
+
+    function nextQuestion1() {
+    
+    document.getElementById("questionsBlock2").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock1").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock2").style.visibility='visible';
+    document.getElementById("questionsBlock1").style.visibility='hidden';
+    // 
+    // 
+    // document.getElementById("questionsBlock2").style.visibility='visible';
+    }
+    function nextQuestion2() {
+    document.getElementById("questionsBlock3").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock2").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock3").style.visibility='visible';
+    document.getElementById("questionsBlock2").style.visibility='hidden';
+//     
+//     document.getElementById("questionsBlock3").style.visibility='visible';
+    }   
+   function nextQuestion3() {
+    document.getElementById("questionsBlock4").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock3").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock4").style.visibility='visible';
+    document.getElementById("questionsBlock3").style.visibility='hidden';
+//     
+//     document.getElementById("questionsBlock4").style.visibility='visible';
+   }
+   function nextQuestion4() {
+    document.getElementById("questionsBlock5").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock4").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock5").style.visibility='visible';
+    document.getElementById("questionsBlock4").style.visibility='hidden';
+//     
+//     document.getElementById("questionsBlock5").style.visibility='visible';
+//     document.getElementById("resultsButton").style.visibility='visible';
+   }
+
 function userResults() {
-    userScore = 0;
+    // document.getElementById("overLay").style.display = "block";
+    // запазване на отговорите на потребителя в променлива userScore
+    userScore = " ";
     // запазване на стойността на радио бутона в променлива question1,2,3,4,5
     question1 = document.querySelector('input[name="question1"]:checked').value
     question2 = document.querySelector('input[name="question2"]:checked').value
-    question3 = document.querySelector('input[name="question3"]:checked').value
-    question4 = document.querySelector('input[name="question4"]:checked').value
-    question5 = document.querySelector('input[name="question5"]:checked').value
-    if (question1 === "answer1") {
-        userScore = userScore + 1;
-    }
-    if (question1 === "answer2") {
-        userScore = userScore + 2;
-    }
-    if (question1 === "answer3") {
-        userScore = userScore + 3;
-    }
-    if (question1 === "answer4") {
-        userScore = userScore + 4;
-    }
-    // question 2
-    if (question2 === "answer1") {
-        userScore = userScore + 1;
-    }
-    if (question2 === "answer2") {
-        userScore = userScore + 2;
-    }
-    if (question2 === "answer3") {
-        userScore = userScore + 3;
-    }
-    if (question2 === "answer4") {
-        userScore = userScore + 4;
-    }
-    // question 3
-    if (question3 === "answer1") {
-        userScore = userScore + 1;
-    }
-    if (question3 === "answer2") {
-        userScore = userScore + 2;
-    }
-    if (question3 === "answer3") {
-        userScore = userScore + 3;
-    }
-    if (question3 === "answer4") {
-        userScore = userScore + 4;
-    }
-    // question 4
-    if (question4 === "answer1") {
-        userScore = userScore + 1;
-    }
-    if (question4 === "answer2") {
-        userScore = userScore + 2;
-    }
-    if (question4 === "answer3") {
-        userScore = userScore + 3;
-    }
-    if (question4 === "answer4") {
-        userScore = userScore + 4;
-    }
-    // question 5
-    if (question5 === "answer1") {
-        userScore = userScore + 1;
-    }
-    if (question5 === "answer2") {
-        userScore = userScore + 2;
-    }
-    if (question5 === "answer3") {
-        userScore = userScore + 3;
-    }
-    if (question5 === "answer4") {
-        userScore = userScore + 4;
-    }
+    // question3 = document.querySelector('input[name="question3"]:checked').value
+    // question4 = document.querySelector('input[name="question4"]:checked').value
+    // question5 = document.querySelector('input[name="question5"]:checked').value
+  
+    // складиране на всички отгорови в променливата
+    userScore = question1 + question2;
     console.log(userScore);
-    if (userScore == 5) {
-        userCharacter = 'Samwell Tarly'
-        console.log('Samwell Tarly')
+    // въпроси за а
+    if (userScore === "af") {
+        userCharacter = "Sansa Stark";
+        imageAnswer = ('img/sansa.jpg');
     }
-    if (userScore === 6) {
-        userCharacter = 'Brienne of Tarth'
-        console.log('Brienne of Tarth')
+   if (userScore === "ag") {
+        userCharacter = "Missandei"
+        imageAnswer = ('img/missandei.jpg');
     }
-    if (userScore === 7) {
-        console.log('Bran Stark')
-        userCharacter = 'Bran Stark';
+    if (userScore === "ah") {
+        userCharacter = "Samwell Tarly"
+        imageAnswer = ('img/Samwell.jpg');
     }
-    if (userScore === 8) {
-        console.log('Lord Varys')
-        userCharacter = 'Lord Varys';
+    if (userScore === "ai") {
+        userCharacter = "Brienne of Tarth"
+        imageAnswer = ('img/Brienne.jpg');
     }
-    if (userScore === 9) {
-        console.log('Bronn')
-        userCharacter = 'Bronn';
+    // въпроси за b
+    if (userScore === "bf") {
+        userCharacter = "Arya Stark"
+        imageAnswer = ('img/Arya.jpg');
     }
-    if (userScore === 10) {
-        console.log('Sansa Stark')
-        userCharacter = 'Sansa Stark';
+    if (userScore === "bg") {
+        userCharacter = "Lord Varys"
+        imageAnswer = ('img/Varys.jpg');
     }
-    if (userScore === 11) {
-        console.log('Cersei Lanniseter')
-        userCharacter = 'Cersei Lannister';
+    if (userScore === "bh") {
+        userCharacter = "Bran Stark"
+        imageAnswer = ('img/Bran.jpg'); 
     }
-    if (userScore === 12) {
-        console.log('Jon Snow')
-        userCharacter = 'Jon Snow';
+    if (userScore === "bi") {
+        userCharacter = "Jon Snow"
+        imageAnswer = ('img/Jon.jpeg'); 
     }
-    if (userScore === 13) {
-        console.log('Tyrion Lannister')
-        userCharacter = 'Tyrion Lannister';
+    // въпроси за с
+    if (userScore === "cf") {
+        userCharacter = "Bronn"
+        imageAnswer = ('img/Bronn.jpeg'); 
     }
-    if (userScore === 14) {
-        console.log('Peter Baelish')
-        userCharacter = 'Peter Baelish';
+    if (userScore === "cg") {
+        userCharacter = "Tyrion Lannister"
+        imageAnswer = ('img/Tyrion.jpg'); 
     }
-    if (userScore === 15) {
-        console.log('Jamie Lannister')
-        userCharacter = 'Jamie Lannister';
+    if (userScore === "ch") {
+        userCharacter = "Jaime Lannister" 
+        imageAnswer = ('img/Jaime.jpg');
     }
-    if (userScore === 16) {
-        console.log('Daenerys Targaryen')
-        userCharacter = 'Daenerys Targaryen';
+    if (userScore === "ci") {
+        userCharacter = "Daenerys Targaryen"
+        imageAnswer = ('img/Daenerys.jpeg');
     }
-    if (userScore === 17) {
-        console.log('Arya Stark')
-        userCharacter = 'Arya Stark';
+    // въпроси за d
+    if (userScore === "df") {
+        userCharacter = "Tormund Giantsbane"
+        imageAnswer = ('img/Tormund.jpg');
     }
-    if (userScore === 18) {
-        console.log('Tormund Giantsbane')
-        userCharacter = 'Tormund Giantsbane';
+    if (userScore === "dg") {
+        userCharacter = "Cersei Lannister"
+        imageAnswer = ('img/Cersei.jpg');
     }
-    if (userScore === 19) {
-        console.log('Missandei')
-        userCharacter = 'Missandei';
+    if (userScore ==="dh") {
+        userCharacter = "Petyr Baelish"
+        imageAnswer = ('img/Petyr Baelish.jpg');
     }
-    if (userScore === 20) {
-        console.log('Davos Seaworth')
-        userCharacter = 'Davos Seaworth';
+    if (userScore === "di") {
+        userCharacter = "The Night King"
+        imageAnswer = ('img/The Night King.jpg');
     }
+    
+    // Показва резултатите
+    document.getElementById("resultsBlock").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock5").style.animation = "slideOutRight 2s";    
+    document.getElementById("resultsBlock").style.visibility='visible';
+    document.getElementById("questionsBlock5").style.visibility='hidden';
+    
+
+    document.getElementById("imageField").src = imageAnswer;      
     document.getElementById("resultsField").style.visibility='visible';
     document.getElementById("resultsField").innerHTML += 'You are ' + userCharacter;
     document.getElementById("resultsButton").style.visibility='hidden';
-    document.getElementById("resultsButton1").style.visibility='visible';    
+    document.getElementById("clearButton").style.visibility='visible';
+        
 }
 function clearResults() {
-    userScore = 0;
-    userCharacter = " ";
-    document.getElementById("resultsField").innerHTML = " ";
-    document.getElementById("resultsField").style.visibility='hidden';
-    document.getElementById("resultsButton").style.visibility='visible';
-    document.getElementById("resultsButton1").style.visibility='hidden';
+    location.reload();
      $(document).ready(function(){
     $(window).scrollTop(0);
 });
 }
-     
+// function off() {
+//     document.getElementById("overLay").style.display = "none";
+// }
+
+  
 
 
