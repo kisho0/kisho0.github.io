@@ -15,42 +15,65 @@ var question5;
 var userScore;
 var userCharacter = "";
 var imageAnswer;
-
-    function nextQuestion1() {
-    
+//  Смяна на въпросите
+    function nextQuestion1() { 
     document.getElementById("questionsBlock2").style.animation = "slideInLeft 2s";
-    document.getElementById("questionsBlock1").style.animation = "slideOutRight 2s";    
+    // document.getElementById("questionsBlock1").style.animation = "slideOutRight 2s";    
     document.getElementById("questionsBlock2").style.visibility='visible';
     document.getElementById("questionsBlock1").style.visibility='hidden';
-    // 
-    // 
-    // document.getElementById("questionsBlock2").style.visibility='visible';
     }
     function nextQuestion2() {
     document.getElementById("questionsBlock3").style.animation = "slideInLeft 2s";
     document.getElementById("questionsBlock2").style.animation = "slideOutRight 2s";    
     document.getElementById("questionsBlock3").style.visibility='visible';
     document.getElementById("questionsBlock2").style.visibility='hidden';
-//     
-//     document.getElementById("questionsBlock3").style.visibility='visible';
+
     }   
    function nextQuestion3() {
     document.getElementById("questionsBlock4").style.animation = "slideInLeft 2s";
     document.getElementById("questionsBlock3").style.animation = "slideOutRight 2s";    
     document.getElementById("questionsBlock4").style.visibility='visible';
     document.getElementById("questionsBlock3").style.visibility='hidden';
-//     
-//     document.getElementById("questionsBlock4").style.visibility='visible';
+
    }
+
    function nextQuestion4() {
     document.getElementById("questionsBlock5").style.animation = "slideInLeft 2s";
     document.getElementById("questionsBlock4").style.animation = "slideOutRight 2s";    
     document.getElementById("questionsBlock5").style.visibility='visible';
     document.getElementById("questionsBlock4").style.visibility='hidden';
-//     
-//     document.getElementById("questionsBlock5").style.visibility='visible';
-//     document.getElementById("resultsButton").style.visibility='visible';
    }
+   function nextQuestion5() {
+    document.getElementById("questionsBlock6").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock5").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock6").style.visibility='visible';
+    document.getElementById("questionsBlock5").style.visibility='hidden';
+   }
+   function nextQuestion6() {
+    document.getElementById("questionsBlock7").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock6").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock7").style.visibility='visible';
+    document.getElementById("questionsBlock6").style.visibility='hidden';
+   }
+   function nextQuestion7() {
+    document.getElementById("questionsBlock8").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock7").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock8").style.visibility='visible';
+    document.getElementById("questionsBlock7").style.visibility='hidden';
+   }
+   function nextQuestion8() {
+    document.getElementById("questionsBlock9").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock8").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock9").style.visibility='visible';
+    document.getElementById("questionsBlock8").style.visibility='hidden';
+   }
+   function nextQuestion9() {
+    document.getElementById("questionsBlock10").style.animation = "slideInLeft 2s";
+    document.getElementById("questionsBlock9").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock10").style.visibility='visible';
+    document.getElementById("questionsBlock9").style.visibility='hidden';
+   }
+   
 
 function userResults() {
     // document.getElementById("overLay").style.display = "block";
@@ -65,6 +88,7 @@ function userResults() {
   
     // складиране на всички отгорови в променливата
     userScore = question1 + question2;
+    //console.log($('#quiestionsBlock5'));
     console.log(userScore);
     // въпроси за а
     if (userScore === "af") {
@@ -137,12 +161,12 @@ function userResults() {
     
     // Показва резултатите
     document.getElementById("resultsBlock").style.animation = "slideInLeft 2s";
-    document.getElementById("questionsBlock5").style.animation = "slideOutRight 2s";    
+    document.getElementById("questionsBlock10").style.animation = "slideOutRight 2s";    
     document.getElementById("resultsBlock").style.visibility='visible';
-    document.getElementById("questionsBlock5").style.visibility='hidden';
+    document.getElementById("questionsBlock10").style.visibility='hidden';
     
 
-    document.getElementById("imageField").src = imageAnswer;      
+    // document.getElementById("imageField").src = imageAnswer;      
     document.getElementById("resultsField").style.visibility='visible';
     document.getElementById("resultsField").innerHTML += 'You are ' + userCharacter;
     document.getElementById("resultsButton").style.visibility='hidden';

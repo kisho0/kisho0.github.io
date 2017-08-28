@@ -26,7 +26,7 @@
                 <form action="group2"> <br>
                 <input type="radio" name="question2" value="f"checked="checked" class="option-input radio" ><label id="questionLabel">I would relly on the support from friends and allies</label><br>
                 <input type="radio" name="question2" value="g"class="option-input radio"><label id="questionLabel">I will try to outsmart them with my briliant mind</label><br>
-                <input type="radio" name="question2" value="h"class="option-input radio"><label id="questionLabel">I will use my knowlage to gain <advantage></advantage></label><br>
+                <input type="radio" name="question2" value="h"class="option-input radio"><label id="questionLabel">I will use my knowlage to gain advantage</label><br>
                 <input type="radio" name="question2" value="i"class="option-input radio"><label id="questionLabel">I will march into battle to defeat them</label><br>
               
                 </form>
@@ -52,8 +52,7 @@
                 <input type="radio" name="question4" value="answer3"class="option-input radio"><label id="questionLabel">Hokey</label><br>
                 <input type="radio" name="question4" value="answer4"class="option-input radio"><label id="questionLabel">Tennis</label><br>
                 </form>
-                <button id="nextButton" onclick="nextQuestion4()">Next Question</button>
-               
+                <button id="nextButton" onclick="nextQuestion4()">Next Question</button> 
             </div>
             <div id="questionsBlock5">
             <h2 id="question">Do you like animals? If yes, which of the following is your favorite?</h2>
@@ -62,12 +61,62 @@
                 <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">Nah, I preffer people company</label><br>
                 <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">Wolf</label><br>
                 <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">Bear</label><br>
-                </form>
-                <button onclick="userResults()" id="resultsButton">Submit</button>      
+                </form> 
+                <button id="nextButton" onclick="nextQuestion5()">Next Question</button>       
             </div>
+            <div id="questionsBlock6">
+                <h2 id="question">Which is your favorite season?</h2>
+                    <form action="group6"> <br>
+                    <input type="radio" name="question5" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">Summer</label><br>
+                    <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">Winter</label><br>
+                    <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">Autumn</label><br>
+                    <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">Spring</label><br>
+                    </form>
+                    <button id="nextButton" onclick="nextQuestion6()">Next Question</button>      
+                </div>
+            <div id="questionsBlock7">
+                 <h2 id="question">What is your favorite color?</h2>
+                     <form action="group5"> <br>
+                    <input type="radio" name="question5" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">Black</label><br>
+                    <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">Red</label><br>
+                    <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">Green</label><br>
+                    <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">Other</label><br>
+                    </form>
+                    <button id="nextButton" onclick="nextQuestion7()">Next Question</button>     
+                    </div>
+            <div id="questionsBlock8">
+                <h2 id="question">What is your favorite ganre of movies?</h2>
+                    <form action="group5"> <br>
+                   <input type="radio" name="question5" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">Thriller</label><br>
+                   <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">Action</label><br>
+                    <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">Horror</label><br>
+                   <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">Love Stories</label><br>
+                    </form>
+                    <button id="nextButton" onclick="nextQuestion8()">Next Question</button>     
+                    </div>
+            <div id="questionsBlock9">
+                <h2 id="question">What music are you into?</h2>
+                    <form action="group5"> <br>
+                    <input type="radio" name="question5" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">Hip-hop</label><br>
+                    <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">Rock</label><br>
+                    <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">Pop</label><br>
+                    <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">Jazz</label><br>
+                    </form>
+                    <button id="nextButton" onclick="nextQuestion9()">Next Question</button> 
+                    </div>
+            <div id="questionsBlock10">
+                <h2 id="question">Where would you preffer to go on a vecation?</h2>
+                    <form action="group5"> <br>
+                    <input type="radio" name="question5" value="answer1" checked="checked"class="option-input radio"><label id="questionLabel">Somewhere in the mountains</label><br>
+                    <input type="radio" name="question5" value="answer2"class="option-input radio"><label id="questionLabel">Near the sea/ocean</label><br>
+                    <input type="radio" name="question5" value="answer3"class="option-input radio"><label id="questionLabel">I would rather stay home</label><br>
+                    <input type="radio" name="question5" value="answer4"class="option-input radio"><label id="questionLabel">I would visit a new city</label><br>
+                     </form>
+                     <button onclick="userResults()" id="resultsButton">Submit</button>       
+                    </div>          
             <div id="resultsBlock">
             <p id="resultsField"> </p>
-            <img id="imageField"> </img>
+            <!-- <img id="imageField"> </img> -->
             <button onclick="clearResults()" id="clearButton">Do the quiz again</button>
             </div>
         <!-- </ol> -->
